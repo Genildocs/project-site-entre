@@ -1,0 +1,22 @@
+<nav>
+  <!-- Menu responsivo -->
+  <div class="relative">
+    <!-- Abertura do modal de menu -->
+    <button (click)="openModal()">
+      <i class="pi pi-bars" style="font-size: 1.5rem"></i>
+    </button>
+    <!-- Menu -->
+    <ul
+      class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white h-full w-full hidden"
+    >
+      <li *ngFor="let item of menuOptions">
+        <a
+          href="javascript:void(0)"
+          class="text-lg font-semibold text-violet-700"
+        >
+          {{ item }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
