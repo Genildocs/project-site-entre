@@ -17,6 +17,10 @@ const routes: Routes = [
     path: 'atendimento',
     component: AtendimentoComponent,
   },
+  {
+    path: 'para-voce',
+    component: ParaEmpresaComponent,
+  },
 ];
 
 @NgModule({

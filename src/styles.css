@@ -18,4 +18,12 @@
 @layer tailwind-utilities {
   @tailwind components;
   @tailwind utilities;
+
+  .active {
+    @apply !opacity-100 !pointer-events-auto !top-1/2 overflow-hidden transition-all duration-500 ease-in-out;
+  }
+
+  .container-main {
+    height: calc(100vh - 96px);
+  }
 }

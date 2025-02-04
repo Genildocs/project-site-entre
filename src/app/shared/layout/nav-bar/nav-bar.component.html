@@ -1,22 +1,51 @@
 <nav>
   <!-- Menu responsivo -->
-  <div class="relative">
+  <div>
     <!-- Abertura do modal de menu -->
-    <button (click)="openModal()">
-      <i class="pi pi-bars" style="font-size: 1.5rem"></i>
+    <button
+      (click)="openModal()"
+      class="relative z-50 md:hidden"
+      [ngClass]="{ hidden: isOpen }"
+    >
+      <i class="pi pi-bars" style="font-size: 1.5rem; color: #5a189a"></i>
     </button>
+
+    <!-- Fechamento do modal -->
+    <button
+      (click)="openModal()"
+      class="relative z-50 md:hidden"
+      [ngClass]="isOpen ? 'block' : 'hidden'"
+    >
+      <i class="pi pi-times" style="font-size: 1.5rem; color: #5a189a"></i>
+    </button>
+
     <!-- Menu -->
     <ul
-      class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white h-full w-full hidden"
+      class="menu-list flex flex-col md:flex-row justify-start pt-[100px] md:pt-0 bg-[#F3E6FF] fixed md:relative top-[-50%] left-1/2 md:inset-0 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0 h-full w-full px-[24px] z-10 opacity-0 md:opacity-100 pointer-events-none md:pointer-events-auto transition-all duration-500 ease-in-out"
+      [ngClass]="{ active: isOpen }"
     >
-      <li *ngFor="let item of menuOptions">
+      @for(item of menuOptions; track $index){
+      <li class="hover-list py-8 flex items-center justify-between">
         <a
-          href="javascript:void(0)"
-          class="text-lg font-semibold text-violet-700"
+          routerLink="{{ item.link }}"
+          class="hover-options text-[#5A189A] font-semibold text-[18px]"
         >
-          {{ item }}
+          {{ item.name }}
         </a>
+        <button>
+          <i
+            class="pi {{ item.icon }}"
+            style="font-size: 1.5rem; color: #5a189a"
+          ></i>
+        </button>
       </li>
+      }
+
+      <button
+        class="bg-[#5A189A] text-white text-[18px] font-semibold border-none p-2 w-full rounded-md transition-all duration-300 ease-in-out"
+      >
+        Assine já
+      </button>
     </ul>
   </div>
 </nav>

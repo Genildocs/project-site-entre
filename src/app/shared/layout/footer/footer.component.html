@@ -1,3 +1,22 @@
-<footer>
-  <p>Footer</p>
+<footer class="px-4 bg-[#5a189a]">
+  <div>
+    <ul>
+      @for(item of menuOptions; track $index){
+      <li class="hover-list py-8 flex items-center justify-center">
+        <a
+          routerLink="{{ item.link }}"
+          class="hover-options text-[#F3E6FF] font-semibold text-[18px]"
+        >
+          {{ item.name }}
+        </a>
+      </li>
+      }
+    </ul>
+  </div>
+  <div>
+    <p>Nos siga nas redes sociais:</p>
+  </div>
+  <p class="text-white">
+    Copyright 2025 © - Portal Entre - Todos os direitos reservados
+  </p>
 </footer>

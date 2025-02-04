@@ -6,22 +6,25 @@ import { Component } from '@angular/core';
   styleUrl: './nav-bar.component.css',
 })
 export class NavBarComponent {
-  menuOptions: String[] = [
-    'Home',
-    'Internet Premium',
-    'Tv e Straming',
-    'Escolha seu pacote',
-    'Para Empresas',
-    'Sobre nós',
-    'Indique e ganhe',
-    'Omni wifi',
-    'Atendimento',
-    'Área do cliente',
+  menuOptions = [
+    { name: 'Home', link: '' },
+    {
+      name: 'Para você',
+      icon: 'pi-angle-right',
+    },
+    { name: 'Para empresa', link: 'para-empresa' },
+    { name: 'Sobre nós', icon: 'pi-angle-right' },
+    { name: 'Atendimento' },
+    { name: 'Ajuda' },
   ];
 
   isOpen: boolean = false;
 
   openModal() {
+    this.isOpen = !this.isOpen;
+  }
+
+  closeModal() {
     this.isOpen = !this.isOpen;
   }
 }

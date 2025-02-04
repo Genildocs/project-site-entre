@@ -8,9 +8,10 @@ import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
 import { LayoutModule } from './shared/layout/layout.module';
 import { PagesModule } from './shared/pages/pages.module';
+import { ComponentsModule } from './shared/components/components.module';
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, LayoutModule, PagesModule],
+  imports: [BrowserModule, AppRoutingModule, LayoutModule, PagesModule, ComponentsModule],
   providers: [
     provideAnimationsAsync(),
     providePrimeNG({
