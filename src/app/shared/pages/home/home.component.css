@@ -1,0 +1,11 @@
+.cards {
+  span {
+    border-bottom: 3px solid #5a189a;
+    font-weight: bold;
+    color: #9d4edd;
+  }
+
+  p {
+    color: #9d4edd;
+  }
+}

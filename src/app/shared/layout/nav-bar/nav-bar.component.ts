@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './nav-bar.component.css',
 })
 export class NavBarComponent {
+  body!: HTMLElement;
+  constructor(private _renderer: Renderer2) {
+    this.body = this._renderer.selectRootElement('body', true);
+  }
+
   menuOptions = [
     { name: 'Home', link: '' },
     {
@@ -14,17 +19,16 @@ export class NavBarComponent {
     },
     { name: 'Para empresa', link: 'para-empresa' },
     { name: 'Sobre nós', icon: 'pi-angle-right' },
-    { name: 'Atendimento' },
-    { name: 'Ajuda' },
   ];
 
   isOpen: boolean = false;
 
   openModal() {
-    this.isOpen = !this.isOpen;
-  }
-
-  closeModal() {
+    if (!this.isOpen) {
+      this._renderer.addClass(this.body, 'overflow-hidden');
+    } else {
+      this._renderer.removeClass(this.body, 'overflow-hidden');
+    }
     this.isOpen = !this.isOpen;
   }
 }

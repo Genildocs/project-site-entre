@@ -1,6 +1,6 @@
-<nav>
+<nav class="h-full">
   <!-- Menu responsivo -->
-  <div>
+  <div class="h-full">
     <!-- Abertura do modal de menu -->
     <button
       (click)="openModal()"
@@ -21,31 +21,82 @@
 
     <!-- Menu -->
     <ul
-      class="menu-list flex flex-col md:flex-row justify-start pt-[100px] md:pt-0 bg-[#F3E6FF] fixed md:relative top-[-50%] left-1/2 md:inset-0 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:translate-y-0 h-full w-full px-[24px] z-10 opacity-0 md:opacity-100 pointer-events-none md:pointer-events-auto transition-all duration-500 ease-in-out"
+      class="menu-list overflow-y-auto flex flex-col md:flex-row justify-start pt-[50px] md:pt-0 bg-[#F3E6FF] fixed md:relative left-0 top-[-100%] md:inset-0 h-full w-full px-[24px] z-10 opacity-0 md:opacity-100 pointer-events-none md:pointer-events-auto transition-all duration-500 ease-in-out"
       [ngClass]="{ active: isOpen }"
     >
-      @for(item of menuOptions; track $index){
-      <li class="hover-list py-8 flex items-center justify-between">
-        <a
-          routerLink="{{ item.link }}"
-          class="hover-options text-[#5A189A] font-semibold text-[18px]"
-        >
-          {{ item.name }}
+      <li class="hover-list py-5">
+        <a routerLink="" class="text-[#5A189A] font-semibold text-[18px]">
+          Home
         </a>
-        <button>
-          <i
-            class="pi {{ item.icon }}"
-            style="font-size: 1.5rem; color: #5a189a"
-          ></i>
-        </button>
       </li>
-      }
+      <li class="hover-list py-5">
+        <a
+          routerLink=""
+          class="text-[#5A189A] font-semibold text-[18px] flex items-center justify-between"
+        >
+          Para você
+          <button class="mt-5">
+            <i
+              class="pi pi-angle-right"
+              style="font-size: 1.5rem; color: #5a189a"
+            ></i>
+          </button>
+        </a>
+      </li>
+      <li class="hover-list py-5 flex items-center justify-between">
+        <a
+          routerLink="para-empresa"
+          class="text-[#5A189A] font-semibold text-[18px]"
+        >
+          Para Empresas
+        </a>
+      </li>
+      <li class="hover-list py-5">
+        <a
+          routerLink=""
+          class="text-[#5A189A] font-semibold text-[18px] flex items-center justify-between"
+        >
+          Sobre nós
+          <button class="mt-5">
+            <i
+              class="pi pi-angle-right"
+              style="font-size: 1.5rem; color: #5a189a"
+            ></i>
+          </button>
+        </a>
+      </li>
 
       <button
         class="bg-[#5A189A] text-white text-[18px] font-semibold border-none p-2 w-full rounded-md transition-all duration-300 ease-in-out"
       >
         Assine já
       </button>
+      <div class="flex items-center justify-center gap-5 mt-5">
+        <a
+          href="https://www.facebook.com/PortalEntre/?locale=pt_BR"
+          target="_blank"
+        >
+          <i
+            class="pi pi-facebook"
+            style="font-size: 1.2rem; color: #5a189a"
+          ></i
+        ></a>
+        <a href="https://www.instagram.com/portal.entre/" target="_blank"
+          ><i
+            class="pi pi-instagram"
+            style="font-size: 1.2rem; color: #5a189a"
+          ></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/company/entre-internetpremium/"
+          target="_blank"
+        >
+          <i
+            class="pi pi-linkedin"
+            style="font-size: 1.2rem; color: #5a189a"
+          ></i
+        ></a>
+      </div>
     </ul>
   </div>
 </nav>

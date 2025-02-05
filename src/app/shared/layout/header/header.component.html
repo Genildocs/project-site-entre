@@ -1,10 +1,31 @@
-<header>
+<header
+  class="fixed w-full bg-[#F3E6FF] flex items-center justify-between h-[72px] shadow-md px-4 md:px-8 lg:px-12 z-[999]"
+>
   <!-- Logomarca -->
-  <a href="javascript:void(0)">
-    <img
-      src="assets/logo.png"
-      alt="Logomarca"
-      class="h-10 object-cover z-50 relative"
-    />
-  </a>
+  <div>
+    <a routerLink="">
+      <img
+        src="assets/logo.png"
+        alt="Logomarca"
+        class="h-10 md:h-[3.5rem] object-cover z-50 relative"
+      />
+    </a>
+  </div>
+
+  <!-- Menu mobile -->
+  <div class="md:hidden">
+    <app-nav-bar></app-nav-bar>
+  </div>
+  <!-- Menu desktop -->
+  <div class="hidden md:block">
+    <app-nav-bar-desktop></app-nav-bar-desktop>
+  </div>
+  <div class="hidden md:flex items-center gap-5">
+    <a
+      href="javascript:void(0)"
+      class="text-[#5A189A] font-semibold text-[18px]"
+      >Área do Cliente</a
+    >
+    <app-button-assine></app-button-assine>
+  </div>
 </header>
