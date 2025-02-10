@@ -12,7 +12,7 @@ export class NavBarDesktopComponent {
       name: 'Para você',
       icon: 'pi-angle-right',
     },
-    { name: 'Para empresa', link: 'para-empresa' },
+    { name: 'Para empresas', link: 'para-empresa' },
     { name: 'Sobre nós', icon: 'pi-angle-right' },
     { name: 'Atendimento' },
     { name: 'Ajuda' },

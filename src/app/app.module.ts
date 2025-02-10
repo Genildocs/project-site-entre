@@ -9,10 +9,19 @@ import Aura from '@primeng/themes/aura';
 import { LayoutModule } from './shared/layout/layout.module';
 import { PagesModule } from './shared/pages/pages.module';
 import { ComponentsModule } from './shared/components/components.module';
+import { provideHttpClient } from '@angular/common/http';
+
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, LayoutModule, PagesModule, ComponentsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    LayoutModule,
+    PagesModule,
+    ComponentsModule,
+  ],
   providers: [
+    provideHttpClient(),
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {
