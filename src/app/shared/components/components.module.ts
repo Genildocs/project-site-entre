@@ -6,7 +6,8 @@ import { PrincipaisServicesComponent } from './principais-services/principais-se
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { SocialMediaComponent } from './social-media/social-media.component';
 import { CarouselComponent } from './carousel/carousel.component';
-
+import { RouterLink } from '@angular/router';
+import { CarouselMainComponent } from './carousel-main/carousel-main.component';
 @NgModule({
   declarations: [
     WhatsapIconComponent,
@@ -14,14 +15,16 @@ import { CarouselComponent } from './carousel/carousel.component';
     PrincipaisServicesComponent,
     SocialMediaComponent,
     CarouselComponent,
+    CarouselMainComponent,
   ],
-  imports: [CommonModule, AngularSvgIconModule.forRoot()],
+  imports: [CommonModule, AngularSvgIconModule.forRoot(), RouterLink],
   exports: [
     WhatsapIconComponent,
     ButtonAssineComponent,
     PrincipaisServicesComponent,
     SocialMediaComponent,
     CarouselComponent,
+    CarouselMainComponent,
   ],
 })
 export class ComponentsModule {}

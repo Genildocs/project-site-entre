@@ -19,6 +19,28 @@
   @tailwind components;
   @tailwind utilities;
 
+  .carousel {
+    @apply bg-blue-500 w-full h-[calc(100vh-72px)]  relative;
+
+    .list {
+      .item {
+        @apply absolute inset-0;
+
+        img {
+          @apply h-full w-full  object-cover;
+        }
+      }
+    }
+
+    .buttons {
+      @apply absolute top-1/2 left-[48px] right-[48px] flex justify-between items-center;
+
+      button {
+        @apply bg-slate-300 hidden md:block  rounded-[50%] w-[40px] h-[40px] text-white text-2xl font-semibold hover:text-black;
+      }
+    }
+  }
+
   .active {
     @apply !opacity-100 !pointer-events-auto !top-12 transition-all duration-500 ease-in-out;
   }
