@@ -8,6 +8,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { RouterLink } from '@angular/router';
 import { CarouselMainComponent } from './carousel-main/carousel-main.component';
+import { CardsComboComponent } from './cards-combo/cards-combo.component';
 @NgModule({
   declarations: [
     WhatsapIconComponent,
@@ -16,6 +17,7 @@ import { CarouselMainComponent } from './carousel-main/carousel-main.component';
     SocialMediaComponent,
     CarouselComponent,
     CarouselMainComponent,
+    CardsComboComponent,
   ],
   imports: [CommonModule, AngularSvgIconModule.forRoot(), RouterLink],
   exports: [
@@ -25,6 +27,7 @@ import { CarouselMainComponent } from './carousel-main/carousel-main.component';
     SocialMediaComponent,
     CarouselComponent,
     CarouselMainComponent,
+    CardsComboComponent,
   ],
 })
 export class ComponentsModule {}

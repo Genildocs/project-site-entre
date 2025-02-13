@@ -1,10 +1,22 @@
-import { Component } from '@angular/core';
-
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
+import { MotionService } from '../../service/motion.service';
 @Component({
   selector: 'app-whatsap-icon',
   templateUrl: './whatsap-icon.component.html',
-  styles: ``
+  styles: ``,
 })
-export class WhatsapIconComponent {
+export class WhatsapIconComponent implements OnInit, AfterViewInit {
+  constructor(private _motionService: MotionService) {}
 
+  @ViewChild('whatsap') whatsap!: ElementRef<HTMLElement>;
+
+  ngOnInit(): void {}
+
+  ngAfterViewInit(): void {}
 }

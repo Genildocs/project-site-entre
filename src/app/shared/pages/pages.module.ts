@@ -8,6 +8,7 @@ import { ParaEmpresaComponent } from './para-empresa/para-empresa.component';
 import { AtendimentoComponent } from './atendimento/atendimento.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { ComponentsModule } from '../components/components.module';
+import { CombosComponent } from './combos/combos.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ComponentsModule } from '../components/components.module';
     ParaVoceComponent,
     ParaEmpresaComponent,
     AtendimentoComponent,
+    CombosComponent,
   ],
   imports: [
     CommonModule,
